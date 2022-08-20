@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  all: unset !important;
+}
+
+.mw-parser-output {
+  text-align: center;
+  table {
+    a {
+      all: unset;
+      pointer-events: none;
+    }
+    img {
+      aspect-ratio: auto;
+    }
+  }
+}
