@@ -1,12 +1,9 @@
-name: Update INDEX
+name: Download today's image
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '30 0 * * *'
 
 jobs:
   build:
@@ -24,27 +21,26 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-
 
-      - uses: pnpm/action-setup@v2.2.2
+      - uses: pnpm/action-setup@v2
         with:
           version: latest
           run_install: true
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v3.4.1
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
           cache: 'pnpm'
 
-      - name: update index.html
-        run: pnpm build
+      - name: download img
+        run: pnpm build:img
 
       - name: Commit files
         run: |
+          git add img
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git commit -m "update index.html" -a || true
-          # The above command will fail if no changes were present, so we ignore
-          # the return code.
+          git commit -m "add today's image" -a || true
       - name: Push changes
         uses: tianheg/github-actions@push
         with:

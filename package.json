@@ -4,7 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "node index.js"
+    "build:index": "node index.js",
+    "build:img": "node img.js"
   },
   "author": "tianheg <me@tianheg.xyz>",
   "license": "MIT",
