@@ -2,6 +2,7 @@
   "name": "daily-image",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "node index.js"
   },
@@ -9,6 +10,8 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.27.2",
+    "cheerio": "1.0.0-rc.12",
+    "node-fetch": "^3.2.10",
     "rss-parser": "^3.12.0"
   }
 }

@@ -6,3 +6,4 @@
 
 1. [How to download images with NodeJS? | ScrapingAnt Blog](https://scrapingant.com/blog/download-image-javascript)
 2. [index.js · main · Sébastien Demanou / Image Downloader · GitLab](https://gitlab.com/demsking/image-downloader/-/blob/main/index.js)
+3. [Cheerio tutorial - web scraping in JavaScript with Cheerio module](https://zetcode.com/javascript/cheerio/)
